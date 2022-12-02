@@ -88,8 +88,9 @@ def convert_to_blob(input_frame, network, height, width):
     network.setInput(blob)
     # get the YOLO output layers numbers (names), these layers will be useful for the detection part
     # the layer's name : yolo_82, yolo_94, yolo_106
-    yoloLayers = network.getLayerNames()
-    outputLayers = [(yoloLayers[i[0]-1]) for i in network.getUnconnectedOutLayers()]
+    # yoloLayers = network.getLayerNames()
+    # outputLayers = [(yoloLayers[i[0]-1]) for i in network.getUnconnectedOutLayers()]
+    outputLayers = network.getUnconnectedOutLayersNames()
     # Doing forward propagation with OpenCV
     outputs = network.forward(outputLayers)
     

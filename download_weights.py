@@ -3,7 +3,7 @@ import shutil
 import wget
 
 directory = 'weights'
-parent_dir = 'C:/Users/taket/Desktop/Jupyter/traffic-signs-detection/'
+parent_dir = '../traffic-signs-detection/'
 path = os.path.join(parent_dir, directory)
 
 # if there is no 'weights' directory, makes one
